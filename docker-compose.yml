@@ -1,0 +1,28 @@
+version: '3.6'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    volumes:
+      - type: bind
+        source: ./src
+        target: /app/src
+    networks:
+      - nestnetwork
+
+  dev-db:
+    image: postgres:13
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: nest
+    networks:
+      - nestnetwork
+networks:
+  nestnetwork:
+    driver: bridge
