@@ -4,9 +4,9 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Book } from 'src/entities/book.entity';
-import { CreateBookDto } from 'src/model/book.model';
-import { IBookService } from 'src/repository/book.repository';
+import { Book } from '../entities/book.entity';
+import { CreateBookDto } from '../model/book.model';
+import { IBookService } from '../services/impl/book.repository';
 import { DeleteResult, Repository } from 'typeorm';
 
 @Injectable()

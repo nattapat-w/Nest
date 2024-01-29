@@ -1,5 +1,5 @@
-import { CreateBookDto } from 'src/model/book.model';
-import { Entity, Column, PrimaryGeneratedColumn, BeforeInsert } from 'typeorm';
+import { CreateBookDto } from '../model/book.model';
+import { Entity, Column, PrimaryGeneratedColumn, BeforeInsert} from 'typeorm';
 
 @Entity('book')
 export class Book {

@@ -1,5 +1,5 @@
-import { CreateBookDto } from 'src/model/book.model';
-import { Book } from 'src/entities/book.entity';
+import { CreateBookDto } from '../../model/book.model';
+import { Book } from '../../entities/book.entity';
 import { DeleteResult } from 'typeorm';
 
 export interface IBookService {
